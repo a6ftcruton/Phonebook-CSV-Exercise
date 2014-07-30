@@ -27,4 +27,7 @@ class EntryRepository
     entries.select { |entry| entry.last_name == last_name && entry.first_name == first_name}
   end
 
+  def find_by_phone(phone)
+    entries.select {|entry| entry.phone_number.gsub(/[^\d]/, '') == phone.gsub(/[^\d]/, '') }
+  end
 end

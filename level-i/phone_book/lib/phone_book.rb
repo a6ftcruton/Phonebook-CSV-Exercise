@@ -16,6 +16,11 @@ class PhoneBook
     end
   end
 
-  
+  def reverse_lookup(phone)
+    repository.find_by_phone(phone)
+
+  end
+
+
 
 end
